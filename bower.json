@@ -1,18 +1,22 @@
 {
   "name": "finance-value",
-  "version": "1.0.6",
+  "version": "0.9.0",
   "authors": [
-    "Anonymous <anonymous@example.com>"
+    "Miguel Ortega Moreno <mortega@conwet.com>"
   ],
-  "description": "An element providing a solution to no problem in particular.",
+  "description": "An element providing current financial value of companies",
   "keywords": [
     "web-component",
     "polymer",
-    "seed"
+    "seed",
+    "finance",
+    "value",
+    "current",
+    "web-components"
   ],
   "main": "finance-value.html",
   "license": "http://polymer.github.io/LICENSE.txt",
-  "homepage": "https://github.com/<USERNAME>/seed-element/",
+  "homepage": "https://github.com/mortega5/finance-value",
   "ignore": [
     "/.*",
     "/test/"
