@@ -60,7 +60,7 @@ Polymer({
     this.addEventListener('symbol-changed', this.requestData.bind(this));
     this.requestData();
   },
-  _generateQuery: function(symbol){
+    _generateQuery: function(symbol){
     var symbol_list = symbol.split(/[\,\;]/);
     var symbols = "";
     for (var i=0;i<symbol_list.length;i++){
