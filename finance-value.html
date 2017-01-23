@@ -54,6 +54,12 @@ Polymer({
       type: Array,
       value: function(){return []},
       notify:true
+    },
+    accuracy: {
+      type: Number,
+      value: 100,
+      reflectToAttribute: true,
+      notify:true
     }
   },
   ready: function(){
@@ -106,7 +112,24 @@ Polymer({
     } else {
       this.set('data',data.query.results.quote);
     }
+    if (this.accuracy != 100){
+      this.checkAccuracy();
+    }
     this.fire('finance-value-ready',{data:this.data});
+  },
+  probability: function(accuracy){
+    var random = Math.round(Math.random()*100);
+    // If accuracy is 85, only change if random is 85-99 (15%)
+    return random >= accuracy
+  },
+  checkAccuracy: function(){
+    if (this.data && this.data.length && this.probability(this.accuracy)){
+      // cambiar algo
+      this.set('data.0.Name', 'Error');
+      this.set('data.0.DaysLow','Error')
+      this.set('data.0.DaysHigh','Error')
+      console.log(this.data);
+    }
   }
 
 });
