@@ -110,7 +110,7 @@ Example:
     probability: function (accuracy) {
       var random = Math.round(Math.random() * 100);
       // If accuracy is 85, only change if random is 85-99 (15%)
-      return random >= accuracy
+      return random < accuracy;
     },
     checkAccuracy: function () {
       if (this.data && this.data.length && this.probability(this.accuracy)) {
